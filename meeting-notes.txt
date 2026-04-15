@@ -1,0 +1,24 @@
+Meeting Notes
+
+Date: April 10, 2026
+
+In this meeting, we discussed the Student Store Module project.
+
+Work completed:
+- Built the frontend using HTML, CSS, and JavaScript
+- Connected the project to MongoDB Atlas
+- Created the product model and API routes
+- Tested the GET /api/products route using Jest and Supertest
+- Ran automate.js successfully
+
+Challenges:
+- There were some errors in app.js and route files
+- The database connection string in the .env file needed correction
+- Jest test needed dotenv configuration to read DB_URI
+- automate.js first showed FAILED, but it was fixed later
+
+Final result:
+The project is working well now.
+Products can be added, displayed, and deleted.
+The API test passed successfully.
+The automation file also showed PASSED.

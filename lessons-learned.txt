@@ -1,0 +1,13 @@
+In this project, I learned how to build a simple full stack application using Node.js, Express, MongoDB Atlas, HTML, CSS, and JavaScript.
+
+I learned how to:
+- connect a project to MongoDB Atlas
+- create a Mongoose model
+- build API routes for GET, POST, PUT, and DELETE
+- connect the frontend with the backend
+- test the API using Jest and Supertest
+- run an automation file using Node.js
+
+I also learned that small errors in files like app.js, routes, or .env can stop the whole project, so checking each file carefully is very important.
+
+This project helped me understand how frontend, backend, database, testing, and automation work together in one application.
