@@ -1,11 +1,27 @@
 const { exec } = require("child_process");
 
-exec("npm.cmd test", (error, stdout, stderr) => {
-  const output = `${stdout}\n${stderr}`;
+exec("npm.cmd test -- --runInBand", (error, stdout, stderr) => {
+  if (stdout) {
+    const lines = stdout.split("\n");
+    const filtered = lines.filter(
+      (line) =>
+        line.includes("@outlook.com") &&
+        line.includes("getAll to show all product") &&
+        (line.includes("PASSED") || line.includes("FAILED"))
+    );
 
-  if (output.includes("PASS")) {
-    console.log("ahmadabukhaterr95@outlook.com - getAll to show all product - 200 - PASSED");
-  } else {
-    console.log("ahmadabukhaterr95@outlook.com - getAll to show all product - 500 - FAILED");
+    if (filtered.length > 0) {
+      console.log(filtered.join("\n"));
+    } else {
+      console.log("No formatted test output found.");
+    }
+  }
+
+  if (stderr) {
+    console.error(stderr);
+  }
+
+  if (error) {
+    process.exit(1);
   }
 });
